@@ -1,13 +1,13 @@
-class Solution(object):
+class Solution:
     def threeSum(self, nums):
         nums.sort()
         result = []
         n = len(nums)
-        
+
         for i in range(n):
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
-            
+
             left, right = i + 1, n - 1
             while left < right:
                 total = nums[i] + nums[left] + nums[right]
@@ -23,5 +23,5 @@ class Solution(object):
                         right -= 1
                     left += 1
                     right -= 1
-        
+
         return result
